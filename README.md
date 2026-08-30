@@ -3,16 +3,19 @@
 Website: https://www.saucedemo.com/
 
 ## Requirements
+
 - Java 17+
 - Maven
 - Google Chrome/Chromium
 
 ## Run
+
 ```bash
 mvn test
 ```
 
 ## Tests
+
 - T1: Navigation smoke test
 - T2: Multiple locator strategies
 - T3: Positive end-to-end login/cart flow
@@ -24,5 +27,5 @@ mvn test
 
 No `Thread.sleep` or positional XPath is used.
 
-Student ID: REPLACE_WITH_STUDENT_ID
-Name: REPLACE_WITH_NAME
+Student ID: ATE/5227/14
+Name: Esrom Basazinaw
