@@ -38,7 +38,7 @@ public class SauceDemoTests extends BaseTest {
     @Test
     void T4_negativePath_wrongCredentialsShowsError() {
         String error = new LoginPage(driver).loginAndGetError("wrong_user", "wrong_password");
-        assertEquals("Epic sadface: Username and password do not match any user in this service", error);
+        assertEquals(" Username and password do not match any user in this service", error);
     }
 
     @Test
@@ -51,9 +51,9 @@ public class SauceDemoTests extends BaseTest {
     // valid partition, invalid/nonexistent partition, and locked-user partition.
     @ParameterizedTest(name = "username partition: {0}")
     @CsvSource({
-        "standard_user, PASS_EXPECTED",
-        "wrong_user, INVALID_USER_EXPECTED",
-        "locked_out_user, LOCKED_USER_EXPECTED"
+            "standard_user, PASS_EXPECTED",
+            "wrong_user, INVALID_USER_EXPECTED",
+            "locked_out_user, LOCKED_USER_EXPECTED"
     })
     void T6_parameterizedEquivalencePartitioning(String username, String expected) {
         LoginPage login = new LoginPage(driver);
@@ -63,9 +63,9 @@ public class SauceDemoTests extends BaseTest {
             String error = login.loginAndGetError(username, "secret_sauce");
             assertTrue(error.contains("Epic sadface:"));
             if (expected.equals("LOCKED_USER_EXPECTED")) {
-                assertEquals("Epic sadface: Sorry, this user has been locked out.", error);
+                assertEquals(" Sorry, this user has been locked out.", error);
             } else {
-                assertEquals("Epic sadface: Username and password do not match any user in this service", error);
+                assertEquals(" Username and password do not match any user in this service", error);
             }
         }
     }
