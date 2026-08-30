@@ -24,5 +24,5 @@ mvn test
 
 No `Thread.sleep` or positional XPath is used.
 
-Student ID: REPLACE_WITH_STUDENT_ID
-Name: REPLACE_WITH_NAME
+Student ID: ATE/5227/14
+Name: Esrom Basazinaw
